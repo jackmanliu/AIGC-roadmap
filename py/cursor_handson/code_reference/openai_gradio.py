@@ -11,7 +11,7 @@ import gradio as gr
 
 # Initialize OpenAI client with API key and base URL
 client = OpenAI(
-    api_key="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", 
+    api_key="xxxxxxxx",
     base_url="https://api.openai.com/v1"
 )
 
