@@ -8,6 +8,7 @@
 ![Github_Copilot_explain_code](img_src/GithubCopilot_explain_code.png)
 
 **_cursor_**
+
 ![cursor_explain_code_1](img_src/cursor_explain_code_1.png)
 ![cursor_explain_code_2](img_src/cursor_explain_code_2.png)
 
