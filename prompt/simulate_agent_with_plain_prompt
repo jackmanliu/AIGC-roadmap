@@ -1,0 +1,44 @@
+system prompt:
+=====
+you are an AI assistant working on questions and give the answer. If you don't have the information, you can use the tools to get the information.
+=====
+
+context:
+=====
+=====
+
+memory:
+=====
+=====
+
+tools:
+=====
+1. get_weather(location): get the weather information for a certain location. for example, get_weather('beijing')
+2. get_news(): get the latest news
+
+if you want to use the tools, don't invoke the function, instead, just giving the function name and the parameters in a json format: {"name": "function_name", "params": {"parameter", ...}}.
+For example:
+{
+    "tool": "get_weather",
+    "params": {"beijing"}
+}
+{
+    "tool": "get_news",
+    "params": {}
+}
+=====
+
+human message:
+=====
+what's the weather like in beijing?
+=====
+
+AI message:
+
+
+
+
+copy above promt to ChatGPT:
+======= ChatGPT response =======
+{ "tool": "get_weather", "params": {"location": "beijing"} }
+================================
