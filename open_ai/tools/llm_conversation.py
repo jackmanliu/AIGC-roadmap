@@ -37,8 +37,8 @@ def proceed_conversation(messages, tool_list=None):
             tools=functions_json_shema_list,
             tool_choice="auto"
         )
-        tool_calls = response.choices[0].message.tool_calls
         result_message = response.choices[0].message
+        tool_calls = response.choices[0].message.tool_calls
         if tool_calls:
             messages.append(result_message)
             for tool_call in tool_calls:
@@ -54,10 +54,13 @@ def proceed_conversation(messages, tool_list=None):
                         "content": func_response
                     }
                 )
-        final_response = client.chat.completions.create(
-            model=openai_model,
-            messages=messages
-        )
-        result_content = final_response.choices[0].message.content
+            final_response = client.chat.completions.create(
+                model=openai_model,
+                messages=messages
+            )
+            result_content = final_response.choices[0].message.content
+        else:
+            result_content = result_message.content
+
     return result_content
 
